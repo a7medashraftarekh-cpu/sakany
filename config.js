@@ -14,9 +14,9 @@ window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyCjHh0Bp2tB0NzOi-4XGIvgbJLM4qxjicA",
   authDomain: "eskak-youth.firebaseapp.com",
   projectId: "eskak-youth",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  storageBucket: "eskak-youth.firebasestorage.app",
+  messagingSenderId: "233428871120",
+  appId: "1:233428871120:web:8e2bad487c3e28509f7bd5"
 };
 
 /* ---------- 2) Paymob (بوابة الدفع الحقيقية) ----------
@@ -39,4 +39,4 @@ window.PAYMOB = {
    أي شخص معدي السن ده يتقبل. الافتراضي 21 سنة.
    لو عايز تقبل أي سن اكتب 0
 */
-window.MIN_AGE = 21;
+window.MIN_AGE = 18;
