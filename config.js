@@ -11,9 +11,9 @@
    5. خد الـ config وحطه هنا
 */
 window.FIREBASE_CONFIG = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
+  apiKey: "AIzaSyCjHh0Bp2tB0NzOi-4XGIvgbJLM4qxjicA",
+  authDomain: "eskak-youth.firebaseapp.com",
+  projectId: "eskak-youth",
   storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
   messagingSenderId: "PASTE_SENDER_ID",
   appId: "PASTE_APP_ID"
