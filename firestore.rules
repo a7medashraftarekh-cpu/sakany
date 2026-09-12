@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // طلبات التقديم: أي حد يقدر يقرأ ويكتب، بس ميقدرش يعدّل أو يمسح
+    match /applications/{nationalId} {
+      allow read: if true;      // عشان صفحة تتبع الطلب تشتغل
+      allow create: if true;    // عشان التقديم الجديد يتحفظ
+      allow update: if false;   // ممنوع التعديل (حماية)
+      allow delete: if false;   // ممنوع الحذف (حماية)
+    }
+
+    // أي collection تانية: ممنوعة تماماً
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

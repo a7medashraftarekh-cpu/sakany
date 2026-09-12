@@ -11,12 +11,12 @@
    5. خد الـ config وحطه هنا
 */
 window.FIREBASE_CONFIG = {
-  apiKey: "AIzaSyCjHh0Bp2tB0NzOi-4XGIvgbJLM4qxjicA",
-  authDomain: "eskak-youth.firebaseapp.com",
-  projectId: "eskak-youth",
-  storageBucket: "eskak-youth.firebasestorage.app",
-  messagingSenderId: "233428871120",
-  appId: "1:233428871120:web:8e2bad487c3e28509f7bd5"
+  apiKey: "PASTE_YOUR_API_KEY",
+  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
+  messagingSenderId: "PASTE_SENDER_ID",
+  appId: "PASTE_APP_ID"
 };
 
 /* ---------- 2) Paymob (بوابة الدفع الحقيقية) ----------
@@ -39,4 +39,4 @@ window.PAYMOB = {
    أي شخص معدي السن ده يتقبل. الافتراضي 21 سنة.
    لو عايز تقبل أي سن اكتب 0
 */
-window.MIN_AGE = 18;
+window.MIN_AGE = 21;

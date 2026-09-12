@@ -526,7 +526,7 @@ function pickProject(id){
 /* ================= Firebase init ================= */
 let db = null;
 try {
-  if (typeof firebase !== 'undefined' && window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey) {
+  if (typeof firebase !== 'undefined' && window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey && !window.FIREBASE_CONFIG.apiKey.includes('PASTE')) {
     firebase.initializeApp(window.FIREBASE_CONFIG);
     db = firebase.firestore();
     console.log('✅ Firebase connected');
@@ -656,7 +656,7 @@ payBtn.addEventListener('click', async ()=>{
 
   try {
     /* ===== REAL PAYMENT: Paymob ===== */
-    if (window.PAYMOB && window.PAYMOB.INTEGRATION_ID) {
+    if (window.PAYMOB && window.PAYMOB.INTEGRATION_ID && window.PAYMOB.INTEGRATION_ID !== 0) {
       await processPaymobPayment();
     } else {
       /* Demo mode — محاكاة */
