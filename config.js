@@ -1,38 +1,25 @@
 /* =====================================================
-   إعدادات الموقع — عدّل القيم دي بمفاتيحك الخاصة
+   إعدادات الموقع — تم إدخال مفاتيح Firebase الخاصة بك
    ===================================================== */
 
-/* ---------- 1) Firebase (قاعدة البيانات) ----------
-   خطوات الإعداد (مجاني 100%):
-   1. ادخل https://console.firebase.google.com
-   2. اعمل مشروع جديد (أي اسم)
-   3. من القائمة: Build > Firestore Database > Create Database > Start in test mode
-   4. من Project Settings > General > Your apps > Web (الأيقونة </>) > سجّل التطبيق
-   5. خد الـ config وحطه هنا
-*/
+/* ---------- 1) Firebase (قاعدة البيانات) ---------- */
 window.FIREBASE_CONFIG = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyCjHh0Bp2tB0NzOi-4XGIvgbJLM4qxjicA",
+  authDomain: "eskak-youth.firebaseapp.com",
+  projectId: "eskak-youth",
+  storageBucket: "eskak-youth.firebasestorage.app",
+  messagingSenderId: "233428871120",
+  appId: "1:233428871120:web:8e2bad487c3e28509f7bd5"
 };
 
 /* ---------- 2) Paymob (بوابة الدفع الحقيقية) ----------
-   خطوات الإعداد:
-   1. سجّل حساب على https://accept.paymob.com
-   2. من لوحة التحكم: Developers > API Keys > خد الـ API Key
-   3. اعمل Integration (Online Card / Wallet) وخد الـ Integration ID
-   4. من Developers > iframes > خد الـ Iframe ID
-   5. فعّل الـ Webhook: Developers > Webhooks > حط رابط:
-      https://YOUR-USERNAME.github.io/REPO-NAME/callback.html
-   ملاحظة: بدون القيم دي الموقع هيشتغل بوضع تجريبي (محاكاة الدفع)
+   اختياري — بدون القيم دي الموقع هيشتغل بوضع تجريبي (محاكاة الدفع)
+   للتفعيل: سجّل في https://accept.paymob.com وخد المفاتيح
 */
 window.PAYMOB = {
-  API_KEY: "PASTE_PAYMOB_API_KEY",        // مثال: ZXlKMGVYQWlPaUp...
-  INTEGRATION_ID: 0,                       // رقم الـ Integration (رقم)
-  IFRAME_ID: 0                             // رقم الـ Iframe (رقم)
+  API_KEY: "PASTE_PAYMOB_API_KEY",        // ← من Paymob لو هتشتغل دفع حقيقي
+  INTEGRATION_ID: 0,                       // ← رقم الـ Integration (رقم)
+  IFRAME_ID: 0                             // ← رقم الـ Iframe (رقم)
 };
 
 /* ---------- 3) الحد الأدنى للسن ----------

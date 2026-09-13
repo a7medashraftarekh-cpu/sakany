@@ -541,6 +541,7 @@ const GOVS = {1:'القاهرة',2:'الإسكندرية',3:'بورسعيد',4:'
 /* ✅ السن: أي شخص معدي 21 سنة (غيّر MIN_AGE في config.js لو حابب) */
 const MIN_AGE = window.MIN_AGE || 21;
 
+/* ✅ تحقق مبسّط: 14 رقم + تاريخ ميلاد صحيح فقط (بدون checksum) */
 function validateNationalId(id){
   if(!/^\d{14}$/.test(id)) return {ok:false, msg:'يجب إدخال 14 رقماً بالضبط'};
   const century = +id[0];
@@ -550,10 +551,6 @@ function validateNationalId(id){
   const d = new Date(year, mm-1, dd);
   if(d.getFullYear()!==year||d.getMonth()!==mm-1||d.getDate()!==dd) return {ok:false, msg:'تاريخ الميلاد داخل الرقم غير صحيح'};
   if(!GOVS[+id.substr(7,2)]) return {ok:false, msg:'كود المحافظة داخل الرقم غير معروف'};
-  let sum=0;
-  for(let i=0;i<13;i++){ sum += +id[i]*(13-i); }
-  const check = (11 - (sum % 11)) % 11;
-  if(check !== +id[13] % 11 && +id[13] !== (check===10?0:check)) return {ok:false, msg:'الرقم القومي غير صحيح — رقم التحقق غير مطابق'};
   const age = Math.floor((Date.now()-d.getTime())/(365.25*24*3600*1000));
   if(age < MIN_AGE) return {ok:false, msg:`السن الحالي ${age} سنة — يجب أن يكون ${MIN_AGE} سنة فأكثر`};
   return {ok:true, birth:`${dd}/${mm}/${year}`, gov:GOVS[+id.substr(7,2)], age};
